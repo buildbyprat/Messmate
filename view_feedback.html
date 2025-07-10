@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View Feedback</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <div class="header">
+        <h1>All Feedback</h1>
+        <a href="{{ url_for('admin') }}" class="admin-link">Back to Admin Page</a>
+    </div>
+
+    <div class="admin-section">
+        {% for fb in feedback_list %}
+            <p><strong>{{ fb.name }}:</strong> {{ fb.feedback }}</p>
+            <hr>
+        {% else %}
+            <p>No feedback submitted yet.</p>
+        {% endfor %}
+    </div>
+
+</body>
+</html>

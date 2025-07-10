@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload Menu – MessMate</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <div class="header">
+        <h1>Upload Menu</h1>
+        <a href="{{ url_for('admin') }}" class="admin-link">Back to Admin Page</a>
+    </div>
+
+    <div class="admin-section">
+        <form method="POST">
+            <label>Breakfast:</label><br>
+            <input type="text" name="breakfast" placeholder="Enter breakfast items"><br><br>
+
+            <label>Lunch:</label><br>
+            <input type="text" name="lunch" placeholder="Enter lunch items"><br><br>
+
+            <label>Snacks:</label><br>
+            <input type="text" name="snacks" placeholder="Enter snacks items"><br><br>
+
+            <label>Dinner:</label><br>
+            <input type="text" name="dinner" placeholder="Enter dinner items"><br><br>
+
+            <button type="submit">Submit Menu</button>
+        </form>
+    </div>
+
+</body>
+</html>

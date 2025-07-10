@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <div class="header">
+        <h1>Feedback Form</h1>
+        <a href="{{ url_for('home') }}" class="admin-link">Back to Home</a>
+    </div>
+
+    <div class="admin-section">
+        <form method="POST">
+            <label>Your Name:</label><br>
+            <input type="text" name="name" placeholder="Enter your name" required><br><br>
+
+            <label>Your Feedback:</label><br>
+            <textarea name="feedback" placeholder="Write your feedback here" required></textarea><br><br>
+
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </div>
+
+</body>
+</html>

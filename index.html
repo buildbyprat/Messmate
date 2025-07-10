@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MessMate</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <div class="header">
+        <h1>MessMate</h1>
+        <a href="{{ url_for('admin') }}" class="admin-link">Admin login</a>
+    </div>
+
+    <div class="menu-section">
+        <h2>Today's Menu</h2>
+        <p><strong>Breakfast:</strong> {{ menu.breakfast }}</p>
+        <p><strong>Lunch:</strong> {{ menu.lunch }}</p>
+        <p><strong>Snacks:</strong> {{ menu.snacks }}</p>
+        <p><strong>Dinner:</strong> {{ menu.dinner }}</p>
+    </div>
+
+    <div class="feedback-button">
+        <a href="{{ url_for('feedback') }}"><button>Give Feedback</button></a>
+    </div>
+
+</body>
+</html>

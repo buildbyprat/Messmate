@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <div class="header">
+        <h1>Admin Page</h1>
+        <a href="{{ url_for('home') }}" class="admin-link">Logout</a>
+    </div>
+
+    <div class="admin-buttons">
+        <a href="{{ url_for('upload') }}" class="admin-btn">Upload Menu</a><br><br>
+        <a href="{{ url_for('view_feedback') }}" class="admin-btn">View Students' Feedback</a>
+    </div>
+
+</body>
+</html>
+
